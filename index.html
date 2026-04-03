@@ -4,48 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shinchan - Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: serif;
+        }
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .header-banner {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .banner-img {
+            width: 80%;
+            height: auto;
+        }
+        .side-logo {
+            width: 20%;
+            text-align: center;
+        }
+        .logo-crayon {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        .logo-crayon span:nth-child(1) { color: #ff0000; }
+        .logo-crayon span:nth-child(2) { color: #ffcc00; }
+        .logo-crayon span:nth-child(3) { color: #009933; }
+        .logo-crayon span:nth-child(4) { color: #ff0000; }
+        .logo-crayon span:nth-child(5) { color: #0099cc; }
+        .logo-crayon span:nth-child(6) { color: #ffcc00; }
+        .logo-crayon span:nth-child(7) { color: #009933; }
+
+        .logo-shinchan {
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 5px 0;
+        }
+        .logo-shinchan span:nth-child(1) { color: #ffff00; }
+        .logo-shinchan span:nth-child(2) { color: #0099cc; }
+        .logo-shinchan span:nth-child(3) { color: #ff0000; }
+        .logo-shinchan span:nth-child(4) { color: #ffcc00; }
+        .logo-shinchan span:nth-child(5) { color: #0099cc; }
+        .logo-shinchan span:nth-child(6) { color: #009933; }
+        .logo-shinchan span:nth-child(7) { color: #ff0000; }
+        .logo-shinchan span:nth-child(8) { color: #ffcc00; }
+
+        .logo-tagline {
+            font-size: 32px;
+            font-weight: bold;
+            color: #cc0000;
+            line-height: 1.4;
+            margin-top: 10px;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 10px 0 25px;
+        }
+        .nav-links a {
+            margin: 0 8px;
+            color: #663399;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+        .game-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .game-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .game-section p {
+            font-size: 18px;
+            font-style: italic;
+        }
+        video {
+            width: 100%;
+            max-width: 640px;
+            display: block;
+            margin: 20px auto;
+        }
+        #characters {
+            text-align: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .character-card {
+            text-align: center;
+        }
+        .character-card img {
+            width: 120px;
+            height: auto;
+            margin: 10px 0;
+        }
+        .character-card p {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0;
+        }
+        #user-form {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        hr {
+            margin: 30px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Shinchan</h1>
-        <h2>CRAY SHINCHAN THE NAUGHTIEST Boy In Town</h2>
-        <hr>
-        <section>
-            <h3>Shinchan: Shiro and the Coal Town</h3>
-            <p>Available on: Nintendo Switch and Windows PC</p>
-
-            <img class="video-cover" src="assets/covers/shin-chan-banner.jpg" alt="Shinchan: Shiro and the Coal Town Cover">
-
-            <video width="640" height="360" controls poster="assets/covers/naughtiest-son.jpg">
-                <source src="assets/video/shinchan-and-the-coal-town.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <p>0:00 / 1:38</p>
-        </section>
+    <header class="header-banner">
+        <img src="assets/covers/shin-chan-banner.jpg" alt="Shinchan Banner" class="banner-img">
+        <div class="side-logo">
+            <div class="logo-crayon">
+                <span>C</span><span>R</span><span>A</span><span>Y</span><span>O</span><span>N</span>
+            </div>
+            <div class="logo-shinchan">
+                <span>S</span><span>H</span><span>I</span><span>N</span><span>C</span><span>H</span><span>A</span><span>N</span>
+            </div>
+            <div class="logo-tagline">
+                THE<br>
+                NAUGHTIEST<br>
+                BOY IN TOWN
+            </div>
+        </div>
     </header>
+
+    <nav class="nav-links">
+        <a href="#game">Shinchan: Shiro and the Coal Town Game</a>
+        <a href="#characters">Characters</a>
+        <a href="#user-form">Who's your favorite?</a>
+    </nav>
+
+    <section id="game" class="game-section">
+        <h2>Shinchan: Shiro and the Coal Town</h2>
+        <p>(Available on: Nintendo Switch and Windows PC)</p>
+
+        <video width="640" height="360" controls poster="assets/video/shinchan-and-the-coal-town.mp4">
+            <source src="assets/video/shinchan-and-the-coal-town.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
 
     <hr>
 
     <main>
         <section id="characters">
-            <h3>The Characters</h3>
-            <ul>
-                <li><strong>Shinnosuke Nohara (Shinchan)</strong> — The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</li>
-                <li><strong>Misae Nohara (Mom)</strong> — Shinchan’s short-tempered but loving mother, always trying to keep him in line.</li>
-                <li><strong>Hiroshi Nohara (Dad)</strong> — The laid-back father who works at a company and enjoys his evening beer.</li>
-                <li><strong>Himawari (Sister)</strong> — The youngest of the Noharas. Loves shiny objects and brandname goods. Smiles sideways, like Shinchan.</li>
-                <li><strong>Shiro (Yukino Nohara)</strong> — The family dog - small, fluffy, and sometimes the most sensible member of the household.</li>
-                <li><strong>Toru Kazama</strong> — The smart and responsible friend of Shinchan, often the voice of reason in the group.</li>
-            </ul>
-
-            <div>
-                <img src="assets/characters/character-shinchan.png" alt="Shinchan" width="100" height="100">
-                <img src="assets/characters/character-misae.webp" alt="Misae" width="100" height="100">
-                <img src="assets/characters/character-hiroshi.webp" alt="Hiroshi" width="100" height="100">
-                <img src="assets/characters/character-himawari.png" alt="Himawari" width="100" height="100">
-                <img src="assets/characters/character-shiro.png" alt="Shiro" width="100" height="100">
-                <img src="assets/characters/character-toru-kazama.webp" alt="Kazama" width="100" height="100">
+            <h2>The Characters</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <h3>Shinnosuke Nohara (Shinchan)</h3>
+                    <img src="assets/characters/character-shinchan.png" alt="Shinchan">
+                    <p>The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Misae Nohara (Mom)</h3>
+                    <img src="assets/characters/character-misae.webp" alt="Misae">
+                    <p>Shinchan's short-tempered but loving mother, always trying to keep him in line.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Hiroshi Nohara (Dad)</h3>
+                    <img src="assets/characters/character-hiroshi.webp" alt="Hiroshi">
+                    <p>The laid-back father who works at a company and enjoys his evening beer.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Himawari (Sister)</h3>
+                    <img src="assets/characters/character-himawari.png" alt="Himawari">
+                    <p>The youngest of the Noharas. Loves shiny objects and brand-name goods. Smiles sideways, like Shinchan</p>
+                </div>
+                <div class="character-card">
+                    <h3>Yukino Nohara (Shiro)</h3>
+                    <img src="assets/characters/character-shiro.png" alt="Shiro">
+                    <p>The family dog — small, fluffy, and sometimes the most sensible member of the household.</p>
+                </div>
+                <div class="character-card">
+                    <h3>Toru Kazama</h3>
+                    <img src="assets/characters/character-toru-kazama.webp" alt="Kazama">
+                    <p>The smart and responsible friend of Shinchan, often the voice of reason in the group.</p>
+                </div>
             </div>
         </section>
 
